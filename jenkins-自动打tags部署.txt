@@ -1,0 +1,33 @@
+#!/bin/bash
+devlops_path=/data/devops/sourceCode/cloudpivot-dflow/web-api
+work_path=/data/cloudpivot/program/backEnd/webapi
+backup_path=/data/cloudpivot/backup/webapi
+cd ${devlops_path}
+git pull origin develop
+if [ $? -ne 0 ] ;then
+    echo "git pull origin develop failed"
+    exit 1
+else
+    echo "git pull origin develop success"
+fi
+mvn -U clean install -Dmaven.test.skip=true
+if [ $? -ne 0 ] ;then
+    echo "build project fail"
+    exit 1
+else
+    echo "build project success"
+fi
+cp ${devlops_path}/target/web-api-1.8.4-bsj-SNAPSHOT.jar ${work_path}
+cd ${work_path}
+mv webapi.jar ${backup_path}/webapi.jar_$(date '+%Y%m%d_%H%M%S')
+mv web-api-1.8.4-bsj-SNAPSHOT.jar webapi.jar
+echo "Update Webapi Success "
+docker restart h3_webapi
+if [ $? -ne 0 ] ;then
+   echo "restart webapi fail"
+   exit
+fi
+
+echo "restart webapi Success "
+tail -f logs/log_total.log
+exit $?
