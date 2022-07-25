@@ -1,0 +1,7 @@
+# 忽略目录
+node_modules/
+packages/
+
+# 忽略文件
+rollup.config.js
+.babelrc

@@ -1,0 +1,32 @@
+{
+  "name": "hcttop-tools",
+  "version": "1.0.4",
+  "description": "基于公司零碳项目的工具库",
+  "main": "dist/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
+  },
+  "keywords": [
+    "Array",
+    "Object",
+    "Recursion"
+  ],
+  "author": "Associate Members",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+http://10.10.20.230/carbon/hcttop-tools.git"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-eslint": "^8.0.2",
+    "@rollup/plugin-inject": "^4.0.4",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "rollup-plugin-terser": "^7.0.2"
+  }
+}

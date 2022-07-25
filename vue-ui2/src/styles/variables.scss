@@ -1,0 +1,19 @@
+
+@import 'variables-light.scss';
+@import 'variables-dark.scss';
+@import 'variables-blue.scss';
+
+$sidebarWidth: 220px;
+$sidebarCollapseWidth: 60px;
+$navbarHeight: 50px;
+$hamburgerHeight: 30px;
+$pageHeaderHeight: 60px;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  hamburgerHeight: $hamburgerHeight;
+  sidebarWidth: $sidebarWidth;
+  navbarHeight: $navbarHeight;
+  pageHeaderHeight: $pageHeaderHeight;
+}

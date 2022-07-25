@@ -1,0 +1,8 @@
+{
+  "button": "packages/button/index.js",
+  "form": "packages/form/index.js",
+  "form-item": "packages/form-item/index.js",
+  "input": "packages/input/index.js",
+  "notice": "packages/notice/notice.js",
+  "genreal-layout": "packages/genreal-layout/genreal-layout.js"
+}

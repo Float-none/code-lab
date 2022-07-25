@@ -1,0 +1,62 @@
+/* Color 
+———————————————————— */
+// 整体主色 / 主标题-文本 / 填充按钮-默认-背景 / 描边按钮-点击-描边 / 文字按钮-凸显
+// 表单-激活-描边 / 已选择标签-描边 / 菜单-点击&当前-选择项 / 开关-启用-背景 / 图标-当前
+$--color-light-primary: #3986ff;
+// 填充按钮-悬停点击-背景
+$--color-light-primary-1: #5295fd;
+// 模块背景-默认 / 反白-全局文本 / 反白-全局图标 / 页头背景色
+$--color-white: #fff;
+$--color-black: #000;
+
+// 副标题-文本 / 表单-已输入文本 / 描边按钮-默认&悬停-文本 / 文字按钮-默认 / 控件-默认-文本
+$--color-light-1: #2b3643;
+// 段落-文本 / 控件&表单-标题文本 / 表格行-文本
+$--color-light-2: #394e65;
+// 标题-辅助-文本 / 表单-提示文本 / 禁用-文本 / 图标-默认
+$--color-light-3: #798695;
+// 描边按钮-悬停-描边 / 表单-悬停-描边 / 滚动条-当前范围
+$--color-light-4: #a5b4cc;
+// 描边按钮-默认-描边 / 控件&表单-默认-描边
+$--color-light-5: #d6deea;
+// 菜单-悬停-选择项背景
+$--color-light-6: #f4f8ff;
+// 页面-大背景底色 / 按钮&表单&控件-禁用 / 分隔线-默认
+$--color-light-7: #f5f5f5;
+// 背景-辅助色 / 侧边栏背景色
+$--color-light-8: #fafafa;
+// 侧边栏-菜单背景-悬停
+$--color-light-9: #eaedf2;
+// 描边（边框）色-辅助色
+$--color-light-10: #e0e6ee;
+
+// 弹窗Toast-背景
+$--color-light-2-a8: rgba(57, 78, 101, 0.8);
+// 页面背景浮层
+$--color-light-2-a2: rgba(57, 78, 101, 0.2);
+// 阴影
+$--color-black-a08: rgba(0, 0, 0, 0.08);
+
+// body backround-color
+$bodyBgLight: $--color-light-7;
+
+// sidebar
+$menuActiveTextLight: #409eff;
+$subMenuActiveTextLight: #409eff; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBgLight: $--color-light-8;
+$menuHoverLight: $--color-light-9;
+
+$subMenuBgLight: $--color-light-8;
+$subMenuHoverLight: $--color-light-9;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  bodyBgLight: $bodyBgLight;
+  menuActiveTextLight: $menuActiveTextLight;
+  subMenuActiveTextLight: $subMenuActiveTextLight;
+  menuHoverLight: $menuHoverLight;
+  subMenuBgLight: $subMenuBgLight;
+  subMenuHoverLight: $subMenuHoverLight;
+}

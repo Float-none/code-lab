@@ -1,0 +1,54 @@
+//  组件主色调
+$--color-dark-primary: #38acff;
+// 顶部导航栏背景
+$--color-dark-1: #0f2d53;
+// 侧边栏背景
+$--color-dark-2: #15355e;
+// 页面标题栏背景、页面内容背景
+$--color-dark-3: #1c3e6b;
+// 页面背景
+$--color-dark-4: #285080;
+// 禁用文本、分隔线
+$--color-dark-5: #39608f;
+// 默认图标、辅助文本
+$--color-dark-6: #6d8db5;
+// 常规文本
+$--color-dark-7: #cfd6e2;
+// 文本-辅助色 / 侧边栏 / 页头
+$--color-dark-8: #f4f8ff;
+// 90%透明度 Toast、操作浮层
+$--color-dark-1-a9: rgba(15, 45, 83, 0.9);
+// 40%透明度 背景浮层
+$--color-dark-1-a4: rgba(15, 45, 83, 0.4);
+// 描边（边框）颜色
+$--color-dark-6-a4: rgba(109, 141, 181, 0.4);
+// 主色调-辅助色 / 选中、激活
+$--color-dark-primary-a2: rgba(56, 134, 255, 0.2);
+
+// body backround-color
+$bodyBgDark: $--color-dark-4;
+
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #409eff;
+$subMenuActiveText: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+
+$menuBgDark: $--color-dark-2;
+$menuHoverDark: $--color-dark-4;
+
+// $subMenuBg: #1f2d3d;
+$subMenuBg: #15355e;
+// $subMenuHover: #001528;
+$subMenuHover: #285080;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBgDark: $menuBgDark;
+  menuHoverDark: $menuHoverDark;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+}

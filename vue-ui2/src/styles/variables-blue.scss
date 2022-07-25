@@ -1,0 +1,70 @@
+/**
+ * Description: reauired, the file description, reference link, etc.
+ * Created Date: 2021-08-05 9:38:27 AM
+ * Author: Liu Man <lm@hcttop.com>
+ * -----
+ * Last Modified: 2021-08-05, 9:38:27 AM
+ * Modified By: Liu Man <lm@hcttop.com>
+ */
+
+/// color|1|Background Color|4
+$--color-white: #ffffff !default;
+/// color|1|Background Color|4
+$--color-black: #000000 !default;
+
+//  组件主色调
+$--color-blue-primary: #229dff;
+// 顶部导航栏背景
+$--color-blue-1: #0f2d53 !default;
+// 侧边栏背景
+$--color-blue-2: #1c3e6b !default;
+// 页面标题栏背景、页面内容背景
+$--color-blue-3: $--color-white !default;
+// 页面背景
+$--color-blue-4: #eff2f7 !default;
+// 禁用文本、分隔线
+$--color-blue-5: #d6deea !default;
+// 默认图标、辅助文本====
+$--color-blue-6: #6d8db5 !default;
+// 常规文本
+$--color-blue-7: #222222 !default;
+// 侧边栏-文本颜色====
+$--color-blue-8: $--color-white !default;
+// 90%透明度 Toast、操作浮层====
+$--color-blue-1-a9: rgba(15, 45, 83, 0.9) !default;
+// 40%透明度 背景浮层====
+$--color-blue-1-a4: rgba(15, 45, 83, 0.4) !default;
+
+// 侧边栏文字颜色
+$--color-blue-icon-off: #c6ced9;
+// 侧边栏文字颜色
+$--color-blue-icon-on: $--color-white;
+// 主色调-辅助色 / 选中、激活
+$--color-blue-primary-a2: rgba(56, 134, 255, 0.2);
+
+// body backround-color
+$bodyBgBlue: $--color-blue-4;
+
+// sidebar
+$menuText: #bfcbd9;
+$menuActiveText: #409eff;
+$subMenuActiveTextBlue: #f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+$menuBgBlue: $--color-blue-2;
+$menuHoverBlue: $--color-blue-primary;
+
+// $subMenuBg: #1f2d3d;
+$subMenuBgBlue: transparent;
+// $subMenuHover: #001528;
+$subMenuHoverBlue: $--color-blue-primary;
+
+// the :export directive is the magic sauce for webpack
+// https://www.bluematador.com/blog/how-to-share-variables-between-js-and-sass
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveTextBlue: $subMenuActiveTextBlue;
+  menuBgBlue: $menuBgBlue;
+  menuHoverBlue: $menuHoverBlue;
+  subMenuBgBlue: $subMenuBgBlue;
+  subMenuHoverBlue: $subMenuHoverBlue;
+}
