@@ -1,0 +1,14 @@
+const summary = (function () {
+          const arr = [];
+          return function () {
+            if (arguments.length === 0) {
+              let num = 0;
+              for (let i = 0, l = arr.length; i < l; i++) {
+                num += arr[i];
+              }
+              return num;
+            }
+            [].push.apply(arr, arguments);
+            return false;
+          };
+        }());
