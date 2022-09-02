@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <canvas id="canvas" class="canvas-box" width="700" height="400"></canvas>
+    <!-- <canvas id="canvas" class="canvas-box" width="700" height="400"></canvas> -->
   </div>
 </template>
 
@@ -9,7 +9,7 @@ import DrawCanvas from "./sprite/drawCanvas";
 
 export default {
   mounted() {
-    const canvas = new DrawCanvas("canvas");
+    // const canvas = new DrawCanvas("canvas");
     // canvas.drawBall({
     //   x: 100,
     //   y: 100,
@@ -17,11 +17,11 @@ export default {
     //   radius: 50
     // });
     // canvas.drawRect();
-    canvas.drawArrow({
-      x: 80,
-      y: 80,
-      color:'red'
-    });
+    // canvas.drawArrow({
+    //   x: 80,
+    //   y: 80,
+    //   color:'red'
+    // });
   },
 };
 </script>
