@@ -7,6 +7,8 @@ import locale from 'element-ui/lib/locale/lang/zh-CN';
 import 'element-ui/lib/theme-chalk/index.css';
 // import '@/assets/theme/light/index.css';
 // import '@/assets/theme/blue/index.css';
+import router from './router/index'
+
 
 Vue.use(ElementUI, {
   locale,
@@ -14,6 +16,7 @@ Vue.use(ElementUI, {
 
 /* eslint-disable no-new */
 new Vue({
+  router,
   el: '#app',
   components: { App },
   template: '<App/>'
