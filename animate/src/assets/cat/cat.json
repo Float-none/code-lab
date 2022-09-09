@@ -1,0 +1,92 @@
+{"frames": {
+
+"未标题-1.png":
+{
+	"frame": {"x":759,"y":187,"w":366,"h":192},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":366,"h":192},
+	"sourceSize": {"w":366,"h":192}
+},
+"未标题-2.png":
+{
+	"frame": {"x":0,"y":187,"w":353,"h":188},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":353,"h":188},
+	"sourceSize": {"w":353,"h":188}
+},
+"未标题-3.png":
+{
+	"frame": {"x":0,"y":0,"w":368,"h":175},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":368,"h":175},
+	"sourceSize": {"w":368,"h":175}
+},
+"未标题-4.png":
+{
+	"frame": {"x":1099,"y":0,"w":356,"h":186},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":356,"h":186},
+	"sourceSize": {"w":356,"h":186}
+},
+"未标题-5.png":
+{
+	"frame": {"x":368,"y":0,"w":367,"h":181},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":367,"h":181},
+	"sourceSize": {"w":367,"h":181}
+},
+"未标题-6.png":
+{
+	"frame": {"x":735,"y":0,"w":364,"h":181},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":364,"h":181},
+	"sourceSize": {"w":364,"h":181}
+},
+"未标题-7.png":
+{
+	"frame": {"x":1455,"y":0,"w":365,"h":187},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":365,"h":187},
+	"sourceSize": {"w":365,"h":187}
+},
+"未标题-8.png":
+{
+	"frame": {"x":1493,"y":187,"w":363,"h":205},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":363,"h":205},
+	"sourceSize": {"w":363,"h":205}
+},
+"未标题-11.png":
+{
+	"frame": {"x":353,"y":187,"w":406,"h":189},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":406,"h":189},
+	"sourceSize": {"w":406,"h":189}
+},
+"未标题-12.png":
+{
+	"frame": {"x":1125,"y":187,"w":368,"h":197},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":368,"h":197},
+	"sourceSize": {"w":368,"h":197}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "cat.png",
+	"format": "RGBA8888",
+	"size": {"w":1856,"h":392},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:e9bef83243926c5d5e133ed9f9e64caf:60e6930fa4530d0902bf258aedb8cd9e:0c90b9ae8b3d48d6500f6626a5b7af7b$"
+}
+}
