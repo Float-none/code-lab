@@ -12,11 +12,46 @@
 <script>
 import * as PIXI from "pixi.js";
 
+// import keyWords from "../data/keywords";
+
+import "../data/main.js";
+
 export default {
   data() {
     return {};
   },
   mounted() {
+    
+    // 数据
+    // const singleFont = {};
+    // keyWords.forEach((name) => {
+    //   if (name.length > 0) {
+    //     name.split("").forEach((element) => {
+    //       if (!singleFont[element]) {
+    //         singleFont[element] = true;
+    //       }
+    //     });
+    //     return;
+    //   }
+    //   if (!singleFont[name]) {
+    //     singleFont[name] = true;
+    //   }
+    // });
+    // const hasR = '石，油，铁，水，电，车，煤，镁，铝，氧，木，金，土，氮，料，废，烯，气，汽，碳，肥，乙，法，机，乳，米，类，甲，汞，奶，磷，岩，钢，肉，茶，果，瓜，麦，梁，粉，面，铜，地，填，生，纸，板，豆，光，树，想，色，汁，空，蛋，丙，酸，棉，厨，苯，剂，涤，船，马，林，柑，橘，衫，锡，辣，氢，镧，梨，钾，毛，牛，皮，酒，糖，羽，镨，铅，鞋，铜';
+    // hasR.split('，').forEach(name=>{
+    //   if(singleFont[name]){
+    //     delete singleFont[name];
+    //   }
+    // })
+
+    // const dig = '1，2，3，4，5，6，7，8，9，0，A，a，B，b，C，c，D，d，E，e，F，f，G，g，H，h，I，i，J，j，K，k，L，l，M，m，N，n，O，o，P，p，Q，q，R，r，S，s，T，t，U，u，V，v，W，w，X，x，Y，y，Z，z';
+
+    // dig.split('，').forEach(name=>{
+    //   singleFont[name] = true;
+    // })
+
+    // console.log(Object.keys(singleFont));
+    
     const app = new PIXI.Application({
       width: 300,
       height: 300,
@@ -43,7 +78,6 @@ export default {
     rectangle.x = 170;
     rectangle.y = 170;
     app.stage.addChild(rectangle);
-
 
     // 绘制文字
     let message = new PIXI.Text("Hello Pixi!");

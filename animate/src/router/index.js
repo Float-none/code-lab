@@ -8,6 +8,7 @@ import collision from "@/views/collision";
 import conservation from "@/views/conservationOfMomentum";
 import nodeGarden from "@/views/nodeGarden";
 import forwardKinematics from "@/views/forwardKinematics";
+import trace from "@/views/trace";
 
 Vue.use(Router);
 
@@ -47,6 +48,11 @@ export default new Router({
       path: "/forward",
       name: "forward",
       component: forwardKinematics
-    }
+    },
+    {
+      path: "/trace",
+      name: "trace",
+      component: trace
+    },
   ]
 });
