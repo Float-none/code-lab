@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+<div class="card card1"><span>1</span></div>
+<div class="card curCard"><span>2</span></div>
+<div class="card card2"><span>2</span></div>
+<div>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  perspective: 700px;
+
+}
+.container{
+	position: absolute;
+	width: 100px;
+	left: 50%;
+	overflow: hidden;
+	height: 200px;
+}
+.card,.card1,.card2{
+	position: absolute;
+	width: 100%;
+	background-color: #f00;
+	border-radius: 5px;
+	height: 100%;
+	z-index: 11;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  opacity: 1;
+	overflow: hidden;
+}
+.card > span{
+	display: block;
+	position: absolute;
+	width: 100%;
+	line-height: 200px;
+	text-align: center;
+	font-size: 134px;
+	font-weight: bold;
+	color: #fff;
+}
+.card1{
+	background-color: #ff0;
+	z-index: 10;
+}
+.card2{
+	background-color: #f00;
+	z-index: 12;
+	top: 100px;
+  transform-origin: top;
+}
+.card2 > span{
+	top: -100px;
+}
+.container:hover > .curCard{
+  opacity: 0.5;
+ 	transform: rotate3d(1, 0, 0, -180deg);
+  backface-visibility: hidden;
+}
+.container:hover > .card2{
+  opacity: 0.5;
+  transition-delay: 0.25s;
+ 	transform: rotate3d(1, 0, 0, 180deg);
+  backface-visibility: hidden;
+}
+</style>
+<script src="./Untitled-111.js"></script>
+<script>
+console.log(abc)
+function aaaaa(arrAttrName) {
+  const arrName = arrAttrName || "item";
+  return {
+    recursion(arr, callbackFn, level,obj) {
+      if (Array.isArray(arr)) {
+        typeof level === "number" ? level++ : (level = 0);
+          obj ?obj : (obj = {});
+        arr.every((item, index) => {
+					obj[level] = item;
+					if(!callbackFn(item, level,obj)){
+						return false;
+					};
+          if (item[arrName] && item[arrName].length > 0) {
+            this.recursion(item[arrName], callbackFn, level,obj);
+          }
+        });
+      }
+    },
+  };
+}
+
+aaaaa("childList").recursion(abc,function(item,level,obj){
+	console.log(1)
+	if('份' === item.dataName){
+		console.log(item.dataName,level,obj[0].dataName,obj[1].dataName || '',[obj[0],obj[1]])
+		return false;
+	}
+	return true;
+})
+
+</script>
+</body>
+</html>
