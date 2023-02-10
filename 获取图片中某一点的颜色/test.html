@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+<div class="card card1"><span>1</span></div>
+<div class="card curCard"><span>2</span></div>
+<div class="card card2"><span>2</span></div>
+<div>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  perspective: 700px;
+
+}
+.container{
+	position: absolute;
+	width: 100px;
+	left: 50%;
+	overflow: hidden;
+	height: 200px;
+}
+.card,.card1,.card2{
+	position: absolute;
+	width: 100%;
+	background-color: #f00;
+	border-radius: 5px;
+	height: 100%;
+	z-index: 11;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transition: 0.5s;
+  opacity: 1;
+	overflow: hidden;
+}
+.card > span{
+	display: block;
+	position: absolute;
+	width: 100%;
+	line-height: 200px;
+	text-align: center;
+	font-size: 134px;
+	font-weight: bold;
+	color: #fff;
+}
+.card1{
+	background-color: #ff0;
+	z-index: 10;
+}
+.card2{
+	background-color: #f00;
+	z-index: 12;
+	top: 100px;
+  transform-origin: top;
+}
+.card2 > span{
+	top: -100px;
+}
+.container:hover > .curCard{
+  opacity: 0.5;
+ 	transform: rotate3d(1, 0, 0, -180deg);
+  backface-visibility: hidden;
+}
+.container:hover > .card2{
+  opacity: 0.5;
+  transition-delay: 0.25s;
+ 	transform: rotate3d(1, 0, 0, 180deg);
+  backface-visibility: hidden;
+}
+</style>
+<script src="./Untitled-111.js"></script>
+<script src="./position.js"></script>
+<script>
+const positionData = [
+    {
+      point: [113.971433, 22.733288],
+      companyName: "光明水厂",
+      value: 706,
+      unit: "个",
+      stateList: {
+        1: [
+          {
+            title: "正常",
+            num: 101,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 10,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 2,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 1,
+            class: "warning",
+          },
+        ],
+        2: [
+          {
+            title: "正常",
+            num: 245,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 9,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 3,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 2,
+            class: "warning",
+          },
+        ],
+        3: [
+          {
+            title: "正常",
+            num: 53,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 5,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 0,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 3,
+            class: "warning",
+          },
+        ],
+        4: [
+          {
+            title: "正常",
+            num: 43,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 2,
+            class: "offline",
+          },
+        ],
+      },
+      barChart0: [
+        77.15, 76.2, 80.61, 92.11, 124.02, 284.99, 459.47, 473.28, 412.73,
+        354.52, 430.98, 510.82, 533.87, 422.59, 384.36, 354.18, 399.96, 440.71,
+        457.39, 433.01, 387.43, 267.8, 223.76, 143.11,
+      ],
+    },
+    {
+      point: [113.919582, 22.740762],
+      companyName: "甲子塘水厂",
+      value: 350,
+      unit: "个",
+      stateList: {
+        1: [
+          {
+            title: "正常",
+            num: 51,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 5,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 3,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 1,
+            class: "warning",
+          },
+        ],
+        2: [
+          {
+            title: "正常",
+            num: 169,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 21,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 4,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 3,
+            class: "warning",
+          },
+        ],
+        3: [
+          {
+            title: "正常",
+            num: 31,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 5,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 0,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 1,
+            class: "warning",
+          },
+        ],
+        4: [
+          {
+            title: "正常",
+            num: 26,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 4,
+            class: "offline",
+          },
+        ],
+      },
+      barChart0: [
+        78.02, 73.47, 73, 72.54, 106.01, 292.15, 453.08, 464.67, 432.8, 381.65,
+        502.96, 538.57, 474.47, 449.07, 413.13, 374.1, 440.58, 554.07, 522.12,
+        428.08, 409.25, 282.08, 228.54, 160.19,
+      ],
+    },
+    {
+      point: [113.899794, 22.785276],
+      companyName: "上村水厂",
+      value: 255,
+      unit: "个",
+      stateList: {
+        1: [
+          {
+            title: "正常",
+            num: 38,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 3,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 0,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 1,
+            class: "warning",
+          },
+        ],
+        2: [
+          {
+            title: "正常",
+            num: 113,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 18,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 2,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 1,
+            class: "warning",
+          },
+        ],
+        3: [
+          {
+            title: "正常",
+            num: 21,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 5,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 3,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 2,
+            class: "warning",
+          },
+        ],
+        4: [
+          {
+            title: "正常",
+            num: 25,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 2,
+            class: "offline",
+          },
+        ],
+      },
+      barChart0: [
+        29.64, 28.14, 28.61, 30.11, 36.86, 98.89, 153.7, 158.51, 162.66, 153.9,
+        172.92, 180.68, 165.23, 157.52, 141.24, 129.98, 153.27, 175.95, 170.96,
+        163.05, 155.86, 127.01, 56.58, 40.85,
+      ],
+    },
+    {
+      point: [113.921324, 22.778184],
+      companyName: "光明水质净化厂",
+      value: 255,
+      unit: "个",
+      stateList: {
+        1: [
+          {
+            title: "正常",
+            num: 41,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 6,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 2,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 1,
+            class: "warning",
+          },
+        ],
+        2: [
+          {
+            title: "正常",
+            num: 138,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 11,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 2,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 3,
+            class: "warning",
+          },
+        ],
+        3: [
+          {
+            title: "正常",
+            num: 34,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 2,
+            class: "offline",
+          },
+          {
+            title: "故障",
+            num: 1,
+            class: "error",
+          },
+          {
+            title: "报警",
+            num: 2,
+            class: "warning",
+          },
+        ],
+        4: [
+          {
+            title: "正常",
+            num: 37,
+            class: "official",
+          },
+          {
+            title: "离线",
+            num: 3,
+            class: "offline",
+          },
+        ],
+      },
+      barChart0: [
+        624, 601.01, 673.36, 746.35, 991.06, 2054.68, 3687.95, 3832.75, 3372.06,
+        2840.87, 3420.23, 4206.28, 4365.84, 3407.45, 3184.3, 2767.06, 3217.82,
+        3561.85, 3767.46, 3520.05, 3187.44, 2140.71, 1750.95, 947.95,
+      ],
+    },
+  ];
+		// console.log(position[Math.ceil(Math.random()*position.length)],Math.ceil(Math.random()*position.length))
+	positionData.forEach(item=>{
+		Object.keys(item.stateList).forEach(name=>{
+			const arr = item.stateList[name];
+			arr.forEach(element=>{
+				element.position = []
+				for(let i = 0; i < element.num; i++){
+					element.position.push(position[Math.ceil(Math.random()*position.length)]);
+				}
+			})
+		})
+		
+	})
+	console.log(positionData)
+</script>
+</body>
+</html>
