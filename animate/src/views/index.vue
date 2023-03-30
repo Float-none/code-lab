@@ -14,7 +14,7 @@ import * as PIXI from "pixi.js";
 
 // import keyWords from "../data/keywords";
 
-import "../data/main.js";
+// import "../data/main.js";
 
 export default {
   data() {

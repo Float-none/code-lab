@@ -9,6 +9,7 @@ import conservation from "@/views/conservationOfMomentum";
 import nodeGarden from "@/views/nodeGarden";
 import forwardKinematics from "@/views/forwardKinematics";
 import trace from "@/views/trace";
+import lineDot from "@/views/lineDot";
 
 Vue.use(Router);
 
@@ -53,6 +54,11 @@ export default new Router({
       path: "/trace",
       name: "trace",
       component: trace
+    },
+    {
+      path: "/line",
+      name: "lineDot",
+      component: lineDot
     },
   ]
 });
